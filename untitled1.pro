@@ -33,7 +33,11 @@ HEADERS += \
         mainwindow.h \
     textclass.h \
     method.h \
+<<<<<<< HEAD
     ui_spamdetector.h
+=======
+    browser.h
+>>>>>>> 4c26d85a901d4eb93fe4428175249a3d5301e6fd
 
 FORMS += \
          spamdetector.ui
