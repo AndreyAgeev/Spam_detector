@@ -26,7 +26,11 @@ void MainWindow::on_pushButton_2_clicked()
 void MainWindow::on_pushButton_clicked()
 {
     Method M;
-    M.result();
+    double result = 0;
+    QString resString;
+    result = M.result(mainString);
+    resString.setNum(result);
+    ui->lineEdit->setText(resString);
 }
 
 void MainWindow::on_textEdit_textChanged()
@@ -35,4 +39,5 @@ void MainWindow::on_textEdit_textChanged()
     QString str=ui->textEdit->toPlainText();
     QStringList strList=str.split('\n');
     str=strList.at(0); /* After pressing "calculate" here will be string to calculate*/
+    mainString = str;
 }
