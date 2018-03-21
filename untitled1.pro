@@ -32,7 +32,8 @@ SOURCES += \
 HEADERS += \
         mainwindow.h \
     textclass.h \
-    method.h
+    method.h \
+    browser.h
 
 FORMS += \
          spamdetector.ui

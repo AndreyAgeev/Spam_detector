@@ -6,6 +6,7 @@ class Method
 {
 public:
     Method();
+    double result();
 };
 
 #endif // METHOD_H

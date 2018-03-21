@@ -1,6 +1,11 @@
 #include "mainwindow.h"
 #include "ui_spamdetector.h"
-
+#include <Qdir>
+#include <QProcess>
+#include <QMessageBox>
+#include <QProcessEnvironment>
+#include "browser.h"
+#include "method.h"
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -11,4 +16,15 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    Browser t;
+    t.openFiles();
+}
+void MainWindow::on_pushButton_clicked()
+{
+    Method M;
+    M.result();
 }
