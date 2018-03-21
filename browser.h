@@ -12,10 +12,9 @@ public:
     {
         QStringList filenames = QFileDialog::getOpenFileNames(
                     this,
-                    tr("Open Document"),
+                    tr("Открыть файл"),
                     QDir::currentPath(),
-                    tr("Documents (*.doc);;All files (*.*)") );
-
+                    tr("Text files (*.txt);;All files (*.*)") );
     }
 };
 

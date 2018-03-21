@@ -5,6 +5,7 @@
 #include <QMessageBox>
 #include <QProcessEnvironment>
 #include "browser.h"
+#include "method.h"
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -20,8 +21,10 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_2_clicked()
 {
     Browser t;
-
-        t.openFiles();
-
+    t.openFiles();
 }
-
+void MainWindow::on_pushButton_clicked()
+{
+    Method M;
+    M.result();
+}
