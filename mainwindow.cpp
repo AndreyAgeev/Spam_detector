@@ -28,3 +28,9 @@ void MainWindow::on_pushButton_clicked()
     Method M;
     M.result();
 }
+
+void MainWindow::on_textEdit_textChanged()
+{
+    QString str=ui->textEdit->toPlainText(); /* After pressing "calculate" here will be string to calculate*/
+
+}
