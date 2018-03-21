@@ -3,11 +3,13 @@
 
 Method::Method()
 {
-}
 
+}
 double Method::result()
+double Method::result(QString string)
 {
     double result = 50;
+    result = string.size();
     return result;
 }
 

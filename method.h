@@ -4,6 +4,9 @@
 #include "textclass.h"
 
 
+#include <Qstring>
+
+
 class Method
 {
 public:
@@ -13,7 +16,7 @@ public:
     TextClass text;
     Method();
     double result();
-
+    double result(QString string);
 };
 
 #endif // METHOD_H
