@@ -4,8 +4,9 @@
 #include <QProcess>
 #include <QMessageBox>
 #include <QProcessEnvironment>
-#include "browser.h"
-#include "method.h"
+#include "src/Browser/browser.h"
+#include "src/Method/method.h"
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)

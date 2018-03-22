@@ -23,16 +23,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp \
-    textclass.cpp \
-    method.cpp
+        src/main.cpp \
+        src/MainWindow/mainwindow.cpp \
+    src/TextClass/textclass.cpp \
+    src/Method/method.cpp
 
 HEADERS += \
-        mainwindow.h \
-    textclass.h \
-    method.h \
-    browser.h
+         src/MainWindow/mainwindow.h \
+    src/TextClass/textclass.h \
+    src/Method/method.h \
+    src/Browser/browser.h
 
 FORMS += \
-         spamdetector.ui
+         src/Forms/spamdetector.ui
