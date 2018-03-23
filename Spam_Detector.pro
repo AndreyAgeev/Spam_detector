@@ -4,7 +4,9 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += \
+           core gui \
+           testlib
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -28,14 +30,16 @@ SOURCES += \
     src/TextClass/textclass.cpp \
     src/Method/method.cpp \
     src/Table/table.cpp \
-    src/Browser/browser.cpp
+    src/Browser/browser.cpp \
+    test/unittest.cpp
 
 HEADERS += \
          src/MainWindow/mainwindow.h \
     src/TextClass/textclass.h \
     src/Method/method.h \
     src/Browser/browser.h \
-    src/Table/table.h
+    src/Table/table.h \
+    test/unittest.h
 
 FORMS += \
          src/Forms/spamdetector.ui
