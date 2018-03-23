@@ -4,10 +4,15 @@ Method::Method()
 {
 
 }
-
-double Method::result(QString string)
+double Method::getResult()
 {
-    double result = 50;
-    result = string.size();
-    return result;
+    return _string.size();
+}
+void Method::setString(const std::string &string)
+{
+    _string = string;
+}
+void setTable(Table && t)
+{
+    // not have a table
 }
