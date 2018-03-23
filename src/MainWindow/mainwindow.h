@@ -20,14 +20,15 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     QString mainString;
-    Method M;
-    TextClass txtCls;
+    Method M; /* Main calculations method */
+    TextClass txtCls; /* Class for normalize string */
+    Table T; /* Table for learning */
 
 private slots:
-    void on_pushButton_2_clicked();
-    void on_pushButton_clicked();
-    void on_textEdit_textChanged();
-    void aboutApp();
+    void on_pushButton_2_clicked(); /* open browser and teach main mechanism */
+    void on_pushButton_clicked(); /* Show results */
+    void on_textEdit_textChanged(); /* catch string from input stream */
+    void aboutApp(); /* 'About' message box */
 
 private:
     Ui::MainWindow *ui;

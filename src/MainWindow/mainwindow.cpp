@@ -74,7 +74,8 @@ void MainWindow::on_pushButton_clicked()
     stringToQString = txtCls.normalizeString();
     normalizedString = QString::fromLocal8Bit(stringToQString.c_str()); /* Reverting std::string to QString */
     /* End of TextClass module*/
-    M.setString(qStringToString);//Andrey changed
+    M.setString(stringToQString);//Andrey changed
+   // M.setTable(T);
     res = M.getResult();//Andrey changed
     resString.setNum(res);
     ui->lineEdit->setText(resString);

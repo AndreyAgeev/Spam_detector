@@ -9,6 +9,7 @@ TextClass::TextClass()
 void TextClass::setString(std::string inputString)
 {
     /* TODO: simple setter, need to fill up private field "str" from inputString */
+    str = inputString;
 }
 
 std::string TextClass::normalizeString()
