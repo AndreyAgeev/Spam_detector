@@ -10,8 +10,17 @@ void Table::tokenizeString(QString string)
 {
     QStringList list;
     /* Firstly - need to detect, will that string be SPAM or HAM*/
+
+    /* Removing unnesesary symbols */
+    string.replace(","," ");
+    string.replace("."," ");
     string.remove(QRegExp(QString::fromUtf8("[-`~!@#$%^&*()_—+=|:;<>«»,.?/{}\'\"\\\[\\\]\\\\]")));
     string.remove("\n");
+    /* REMINDER! SOMETIMES IT PRODUCES THAT:
+     * "Normal,sentence" -> "NormalSentence"
+     * TODO:: FIXING
+    */
+
     if(string[0] == "s")
     {
         /* THIS IS SPAM */
@@ -34,6 +43,12 @@ void Table::tokenizeString(QString string)
 
 void Table::insertIntoSPAMTable(QStringList listTokens)
 {
+
+    /* TODO:
+     * Hash-functions?
+     * Sorting table?
+     * Dont like that function, maybe needs rewriting
+*/
     for(int i = 0; i < listTokens.size(); i++)
     {
         /* STEP 1 - Search*/
@@ -51,8 +66,14 @@ void Table::insertIntoSPAMTable(QStringList listTokens)
 
 void Table::insertIntoHAMTable(QStringList listTokens)
 {
+    /* TODO:
+     * Hash-functions?
+     * Sorting table?
+     * Dont like that function, maybe needs rewriting
+*/
     for(int i = 0; i < listTokens.size(); i++)
     {
+
         /* STEP 1 - Search*/
         if(hamTable.contains(listTokens[i]))
         {
