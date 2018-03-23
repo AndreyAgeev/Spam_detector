@@ -61,6 +61,7 @@ void MainWindow::on_pushButton_2_clicked()
 {
     Browser B;
     T = B.openFiles();
+    M.setTable(T);
 }
 void MainWindow::on_pushButton_clicked()
 {
@@ -74,7 +75,7 @@ void MainWindow::on_pushButton_clicked()
     stringToQString = txtCls.normalizeString();
     normalizedString = QString::fromLocal8Bit(stringToQString.c_str()); /* Reverting std::string to QString */
     /* End of TextClass module*/
-    M.setString(stringToQString);//Andrey changed
+    M.setString(mainString);//Andrey changed
    // M.setTable(T);
     res = M.getResult();//Andrey changed
     resString.setNum(res);

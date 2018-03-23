@@ -1,6 +1,6 @@
 #ifndef METHOD_H
 #define METHOD_H
-#include <string>
+#include <QString>
 #include <iostream>
 #include "src/Table/table.h"
 class Method
@@ -8,10 +8,11 @@ class Method
     public:
         Method();
         double getResult();
-        void setString(const std::string &string);
-        void setTable(Table && t);
+        void setString(const QString &string);
+        void setTable( Table t);
+        double Pr(QString, const char &type);
     private:
-        std::string _string;
+        QString _string;
         Table _t;
 };
 

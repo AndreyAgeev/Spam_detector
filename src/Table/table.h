@@ -4,14 +4,15 @@
 #include <QMap>
 class Table
 {
- public:
-    Table();
-    void tokenizeString(QString string);
-    void insertIntoSPAMTable(QStringList listTokens);
-    void insertIntoHAMTable(QStringList listTokens);
-
-private:
-    QMap<QString, double> spamTable;
-    QMap<QString, double> hamTable;
+    public:
+        Table();
+        void tokenizeString(QString string);
+        void insertIntoSPAMTable(QStringList listTokens);
+        void insertIntoHAMTable(QStringList listTokens);
+  //      QMap <QString, double> getSpamTable();
+  //      QMap <QString, double> getHamTable();
+        QMap<QString, double> spamTable;
+        double getKey(QString string, QMap<QString, double> &table);
+        QMap<QString, double> hamTable;
 };
 #endif // TABLE_H

@@ -21,7 +21,4 @@ std::string TextClass::normalizeString()
     */
     return str;
 }
-TextClass::TextClass(const int &n)
-{
-    std::cout << n;
-}
+

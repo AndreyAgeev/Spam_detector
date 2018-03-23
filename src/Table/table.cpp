@@ -86,3 +86,25 @@ void Table::insertIntoHAMTable(QStringList listTokens)
         }
     }
 }
+double Table::getKey(QString string, QMap<QString, double> &table)
+{
+    QMap<QString,double>::iterator it = table.begin();
+    for(; it != table.end(); ++it)
+    {
+        if(it.key() == string)
+            return it.value();
+    }
+    double res = 0.0;
+    return res;
+  //  return static_cast<double&>(0.);
+}
+/*QMap<QString, double> Table::getHamTable()
+{
+    return hamTable;
+}
+
+QMap<QString, double> Table::getSpamTable()
+{
+    return spamTable;
+}*/
+
