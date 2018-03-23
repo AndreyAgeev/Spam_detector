@@ -20,12 +20,8 @@ private slots:
     void on_pushButton_2_clicked();
     void on_pushButton_clicked();
     void on_textEdit_textChanged();
-    void action()
-    {
-        QMessageBox msg;
-        msg.setText("Action");
-        msg.exec();
-    }
+    void aboutApp();
+
 private:
     Ui::MainWindow *ui;
 };

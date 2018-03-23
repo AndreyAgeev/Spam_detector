@@ -36,3 +36,6 @@ HEADERS += \
 
 FORMS += \
          src/Forms/spamdetector.ui
+
+RESOURCES += \
+    res.qrc
