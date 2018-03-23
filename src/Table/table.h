@@ -6,10 +6,12 @@ class Table
 {
  public:
     Table();
-    QStringList tokenizeString(QString string);
-    void insertIntoTable(QStringList listTokens);
-private:
+    void tokenizeString(QString string);
+    void insertIntoSPAMTable(QStringList listTokens);
+    void insertIntoHAMTable(QStringList listTokens);
     QMap<QString, double> spamTable;
     QMap<QString, double> hamTable;
+//private:
+
 };
 #endif // TABLE_H

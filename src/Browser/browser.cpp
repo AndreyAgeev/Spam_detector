@@ -1,4 +1,6 @@
 #include "browser.h"
+#include <QFile>
+#include <QTextStream>
 
 Browser::Browser()
 {
@@ -15,9 +17,23 @@ Table Browser::openFiles()
         while(!learningFile.atEnd())
         {
             QString curString = learningFile.readLine();
-            QStringList tokenisedString = T.tokenizeString(curString);
-            T.insertIntoTable(tokenisedString);
+            T.tokenizeString(curString);
         }
+    }
+    QFile testOutputFile("C:\\Users\\Dmitriy\\Desktop\\file.txt");
+    if(testOutputFile.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        QMap<QString,double>::iterator it = T.hamTable.begin();
+        for(;it != T.hamTable.end(); ++it)
+        {
+           QTextStream stream(&testOutputFile);
+           stream << "\n";
+           stream << it.key();
+           stream << " ";
+           stream << it.value();
+           stream << "\n";
+        }
+
     }
     return T;
 }
