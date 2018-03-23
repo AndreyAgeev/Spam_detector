@@ -4,18 +4,12 @@
 
 #include <QFileDialog>
 #include <QString>
+#include "src/Table/table.h"
 class Browser : public QWidget
 {
 public:
-
-    void openFiles()
-    {
-        QStringList filenames = QFileDialog::getOpenFileNames(
-                    this,
-                    tr("Открыть файл"),
-                    QDir::currentPath(),
-                    tr("CSV files (*.csv)") );
-    }
+    Browser();
+    Table openFiles();
 };
 
 #endif // BROWSER_H

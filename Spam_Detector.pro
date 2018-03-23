@@ -27,7 +27,8 @@ SOURCES += \
         src/MainWindow/mainwindow.cpp \
     src/TextClass/textclass.cpp \
     src/Method/method.cpp \
-    src/Table/table.cpp
+    src/Table/table.cpp \
+    src/Browser/browser.cpp
 
 HEADERS += \
          src/MainWindow/mainwindow.h \

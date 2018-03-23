@@ -59,8 +59,8 @@ void MainWindow::aboutApp()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    Browser t;
-    t.openFiles();
+    Browser B;
+    T = B.openFiles();
 }
 void MainWindow::on_pushButton_clicked()
 {
