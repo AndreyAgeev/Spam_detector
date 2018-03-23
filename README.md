@@ -27,12 +27,6 @@ Spam Detector для рабочего стола Windows
 - Microsoft Windows 7(x86/x64) или более новые версии
 - Microsoft Visual C++ 2015 Redistributable Package  или новее
 - Qt Creator 2.0
-## Средства разработки программного продукта
-Язык программирования - C++ с Qt5
-Интерфейс - Qt
-Тестирование - QT-unit тесты
-Документация - doxygen
-Проверка стиля и синтаксиса итогового продукта - Cpp Check Code Analysis Tools версии 1.82.
 
 ## Средства разработки программного обеспечения
 
