@@ -2,6 +2,12 @@
 #include <QFile>
 #include <QTextStream>
 
+/* TODO:
+ *
+*/
+
+
+
 Browser::Browser()
 {
 
@@ -9,31 +15,19 @@ Browser::Browser()
 
 Table Browser::openFiles()
 {
-    Table T;
+    Table T; /* Temp table */
+    /* Catching name of learning file /src/learning/**.csv */
     QString fileName = QFileDialog::getOpenFileName(this, tr("Открыть файл"), QDir::currentPath(), tr("CSV files (*.csv)") );
+    /* Opening file*/
     QFile learningFile(fileName);
     if(learningFile.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         while(!learningFile.atEnd())
         {
+            /* read csv file by strings and filling the tables */
             QString curString = learningFile.readLine();
-            T.tokenizeString(curString);
+            T.tokenizeString(curString); /* TODO:: GOOD FUNCTION!*/
         }
-    }
-    QFile testOutputFile("C:\\Users\\Dmitriy\\Desktop\\file.txt");
-    if(testOutputFile.open(QIODevice::WriteOnly | QIODevice::Text))
-    {
-        QMap<QString,double>::iterator it = T.hamTable.begin();
-        for(;it != T.hamTable.end(); ++it)
-        {
-           QTextStream stream(&testOutputFile);
-           stream << "\n";
-           stream << it.key();
-           stream << " ";
-           stream << it.value();
-           stream << "\n";
-        }
-
     }
     return T;
 }

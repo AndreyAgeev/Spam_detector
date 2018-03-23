@@ -9,9 +9,9 @@ class Table
     void tokenizeString(QString string);
     void insertIntoSPAMTable(QStringList listTokens);
     void insertIntoHAMTable(QStringList listTokens);
+
+private:
     QMap<QString, double> spamTable;
     QMap<QString, double> hamTable;
-//private:
-
 };
 #endif // TABLE_H
