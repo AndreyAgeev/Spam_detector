@@ -26,13 +26,15 @@ SOURCES += \
         src/main.cpp \
         src/MainWindow/mainwindow.cpp \
     src/TextClass/textclass.cpp \
-    src/Method/method.cpp
+    src/Method/method.cpp \
+    src/Table/table.cpp
 
 HEADERS += \
          src/MainWindow/mainwindow.h \
     src/TextClass/textclass.h \
     src/Method/method.h \
-    src/Browser/browser.h
+    src/Browser/browser.h \
+    src/Table/table.h
 
 FORMS += \
          src/Forms/spamdetector.ui

@@ -74,7 +74,6 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_textEdit_textChanged()
 {
-
     QString str=ui->textEdit->toPlainText();
     QStringList strList=str.split('\n');
     str=strList.at(0); /* After pressing "calculate" here will be string to calculate*/
