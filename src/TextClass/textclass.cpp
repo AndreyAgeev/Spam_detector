@@ -3,7 +3,6 @@
 TextClass::TextClass()
 {
 
-    std::cout << str;
 }
 
 void TextClass::setString(std::string inputString)
