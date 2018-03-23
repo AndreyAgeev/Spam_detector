@@ -96,15 +96,6 @@ double Table::getKey(QString string, QMap<QString, double> &table)
     }
     double res = 0.0;
     return res;
-  //  return static_cast<double&>(0.);
-}
-/*QMap<QString, double> Table::getHamTable()
-{
-    return hamTable;
 }
 
-QMap<QString, double> Table::getSpamTable()
-{
-    return spamTable;
-}*/
 
