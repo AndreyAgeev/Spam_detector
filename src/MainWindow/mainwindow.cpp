@@ -64,11 +64,19 @@ void MainWindow::on_pushButton_2_clicked()
 }
 void MainWindow::on_pushButton_clicked()
 {
-    Method M;
-    double result = 0;
-    QString resString;
-    result = M.result(mainString);
-    resString.setNum(result);
+    double res = 0;
+    QString resString, normalizedString;
+
+    /* Module in TextClass, setting string to normalize, then get normalized string */
+    std::string stringToQString;
+    std::string qStringToString = std::string(mainString.toLocal8Bit().data()); /* Reverting QString to std::string */
+    txtCls.setString(qStringToString);
+    stringToQString = txtCls.normalizeString();
+    normalizedString = QString::fromLocal8Bit(stringToQString.c_str()); /* Reverting std::string to QString */
+    /* End of TextClass module*/
+
+    res = M.result(mainString);
+    resString.setNum(res);
     ui->lineEdit->setText(resString);
 }
 
