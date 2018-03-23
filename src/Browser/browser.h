@@ -14,7 +14,7 @@ public:
                     this,
                     tr("Открыть файл"),
                     QDir::currentPath(),
-                    tr("Text files (*.txt);;All files (*.*)") );
+                    tr("CSV files (*.csv)") );
     }
 };
 
