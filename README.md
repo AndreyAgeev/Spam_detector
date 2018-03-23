@@ -25,8 +25,8 @@ Spam Detector для рабочего стола Windows
 
 ## Требования к программному обеспечению
 - Microsoft Windows 7(x86/x64) или более новые версии
-- Microsoft Visual C++ 2015 Redistributable Package  или новее
-- Qt Creator 2.0
+- Microsoft Visual C++ 2015 Redistributable Package или более новые версии
+- Qt Creator версии 2.0 или более новые версии
 
 ## Средства разработки программного обеспечения
 
