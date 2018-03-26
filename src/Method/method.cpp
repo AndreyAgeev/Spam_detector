@@ -19,13 +19,16 @@ double Method::Pr(QString word, const char &type)
 }
 double Method::getResult()
 {
+    //We need to catch Nan
+    if(_t.hamTable.size() == 0 || _t.spamTable.size() == 0)
+        return -1;
     double result = 1.0;
     double inc = 1.0;
     QStringList list;
     list = _string.split(" ");
     const int n = list.size();
     double * pn = new double[n];
-      for(auto i = 0; i < list.size(); i++)
+    for(auto i = 0; i < list.size(); i++)
     {
         QString W = list.at(i);
         pn[i] = Pr(W, 'S')/(Pr(W, 'S') + Pr(W, 'H'));

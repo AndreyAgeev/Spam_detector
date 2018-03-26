@@ -77,6 +77,11 @@ void MainWindow::on_pushButton_clicked()
     /* End of TextClass module*/
     M.setString(mainString);//Andrey changed
     res = M.getResult();//Andrey changed
+    if(res == -1)
+    {
+        ui->lineEdit->setText("Error, the model was not trained");
+        return;
+    }
     resString.setNum(res);
     ui->lineEdit->setText(resString);
 }
