@@ -1,5 +1,24 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
+/**
+ * @mainpage Introduction
+
+SpamDetector представляет собой простейшее приложения для детекции спама.
+Это приложение способно на основании обученной модели определять вероятность того, что
+введенное пользователем приложения является спамом
+@code{.c}
+#include "labengine.h"
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+    return a.exec();
+}
+
+@endcode
+Эта программа создает графическое окно, в котором пользователь может вводить сообщения и обучить модель
+*/
 
 #include <QMainWindow>
 #include <QString>
