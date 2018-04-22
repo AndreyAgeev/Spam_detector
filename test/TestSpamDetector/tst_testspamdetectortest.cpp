@@ -1,11 +1,11 @@
 #include <QString>
 #include <QtTest>
 #include <QCoreApplication>
-#include "C:/Programming/project/src/Method/method.h"
-#include "C:/Programming/project/src/Table/table.h"
-#include "C:/Programming/project/src/Table/table.cpp"
-#include "C:/Programming/project/src/Method/method.cpp"
-//#include "C:/Programming/project/src/Browser/browser.h"
+#include "../../../src/Method/method.h"
+#include "../../../src/Table/table.h"
+#include "../../../src/Table/table.cpp"
+#include "../../../src/Method/method.cpp"
+
 class TestSpamDetectorTest : public QObject
 {
     Q_OBJECT

@@ -75,8 +75,8 @@ void MainWindow::on_pushButton_clicked()
     stringToQString = txtCls.normalizeString();
     normalizedString = QString::fromLocal8Bit(stringToQString.c_str()); /* Reverting std::string to QString */
     /* End of TextClass module*/
-    M.setString(mainString);//Andrey changed
-    res = M.getResult();//Andrey changed
+    M.setString(mainString);
+    res = M.getResult();
     if(res == -1)
     {
         ui->lineEdit->setText("Error, the model was not trained");
