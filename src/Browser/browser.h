@@ -9,6 +9,15 @@ class Browser : public QWidget
 {
 public:
     Browser();
+	//Browser();
+	/**
+	* @brief Открытие файла.
+	*
+	* Функция открывает файл, выбранный пользователем,
+	* возвращает заполненную таблицу.
+	*
+	* @return @ref Table
+	*/
     Table openFiles();
 };
 
