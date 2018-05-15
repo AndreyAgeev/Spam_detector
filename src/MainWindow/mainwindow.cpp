@@ -25,6 +25,19 @@ MainWindow::MainWindow(QWidget *parent) :
     QAction *closeApp = new QAction(tr("Выход из программы"), this); /* CloseApp Action */
     QAction *aboutApp = new QAction(tr("О программе"),this); /* About Message box action */
 
+	/*Learn the Model on the default file*/
+	Table tmpT;
+    QFile learningFile("spam.csv");
+    if(learningFile.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+		while(!learningFile.atEnd())
+		{
+			QString curString = learningFile.readLine();        
+			tmpT.tokenizeString(curString);
+		}
+    }
+    M.setTable(tmpT);
+	
     /* Connecting manually signals and slots */
     connect(openFile, SIGNAL(triggered()), this, SLOT(on_pushButton_2_clicked()));
     connect(closeApp, SIGNAL(triggered()), this, SLOT(close()));
