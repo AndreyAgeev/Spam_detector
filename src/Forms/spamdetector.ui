@@ -40,40 +40,40 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>10</y>
-      <width>371</width>
+      <x>20</x>
+      <y>340</y>
+      <width>500</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Spam-detector -приложение, позволяющая определять спам </string>
+     <string>Приложение Spam-detector опрежеляет вероятность того, что сообщение не спам. </string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>30</y>
-      <width>681</width>
-      <height>21</height>
+      <x>20</x>
+      <y>355</y>
+      <width>600</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>по сообщению, и возвращать число. На выходе - вещественное</string>
+     <string>Возможные результаты работы: число от 0 до 1 - на сколько сообщение не спам, nan - не удалось определить.</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>50</y>
-      <width>371</width>
+      <x>20</x>
+      <y>370</y>
+      <width>570</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string> число в интервале [0..1]. 0 - точно спам, 1 - точно не спам.</string>
+     <string>Система уже обучена на файле по умолчанию, но у Вас есть возможность обучить ее на своем файле.</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit">
