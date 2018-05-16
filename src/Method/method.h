@@ -2,8 +2,7 @@
 #define METHOD_H
 #include <QString>
 #include <iostream>
-//#include "src/Table/table.h"
-#include "C:/Programming/project/src/Table/table.h"
+#include "./src/Table/table.h"
 class Method
 {
     public:
