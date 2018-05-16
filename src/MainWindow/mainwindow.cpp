@@ -27,7 +27,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 	/*Learn the Model on the default file*/
 	Table tmpT;
-    QFile learningFile("spam.csv");
+    QFile learningFile("../learning/spam.csv");
     if(learningFile.open(QIODevice::ReadOnly | QIODevice::Text))
     {
 		while(!learningFile.atEnd())
