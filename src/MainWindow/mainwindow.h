@@ -7,7 +7,10 @@ SpamDetector представляет собой простейшее прило
 Это приложение способно на основании обученной модели определять вероятность того, что
 введенное пользователем приложения является спамом
 @code{.c}
-#include "labengine.h"
+#include "src/MainWindow/mainwindow.h"
+#include "src/TextClass/textclass.h"
+#include <QApplication>
+#include "test/unittest.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
