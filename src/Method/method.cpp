@@ -39,6 +39,7 @@ double Method::getResult()
     {
         result = result/(result + inc);
     }
+    delete [] pn;
     return result;
 }
 void Method::setString(const QString &string)
