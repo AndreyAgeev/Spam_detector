@@ -8,9 +8,7 @@ SpamDetector представляет собой простейшее прило
 введенное пользователем приложения является спамом
 @code{.c}
 #include "src/MainWindow/mainwindow.h"
-#include "src/TextClass/textclass.h"
 #include <QApplication>
-#include "test/unittest.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
