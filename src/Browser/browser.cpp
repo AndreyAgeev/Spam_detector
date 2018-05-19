@@ -16,7 +16,7 @@ Browser::Browser()
 Table Browser::openFiles()
 {
     Table T; /* Temp table */
-    /* Catching name of learning file /src/learning/**.csv */
+    /* Catching name of learning file /src/learning/some.csv */
     QString fileName = QFileDialog::getOpenFileName(this, tr("Открыть файл"), QDir::currentPath(), tr("CSV files (*.csv)") );
     /* Opening file*/
     QFile learningFile(fileName);
