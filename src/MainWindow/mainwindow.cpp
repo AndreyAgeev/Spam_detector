@@ -79,11 +79,8 @@ void MainWindow::on_pushButton_2_clicked()
 void MainWindow::on_pushButton_clicked()
 {
     double res = 0;
-    QString resString, normalizedString;
+    QString resString;
 
-    /* Module in TextClass, setting string to normalize, then get normalized string */
-    std::string stringToQString;
-    normalizedString = QString::fromLocal8Bit(stringToQString.c_str()); /* Reverting std::string to QString */
     /* End of TextClass module*/
     M.setString(mainString);
     res = M.getResult();
