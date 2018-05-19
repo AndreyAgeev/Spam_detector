@@ -27,7 +27,6 @@ int main(int argc, char *argv[])
 #include <QString>
 #include <QMessageBox>
 #include "src/Method/method.h"
-#include "src/TextClass/textclass.h"
 #include "src/Table/table.h"
 
 namespace Ui {
@@ -55,14 +54,6 @@ public:
      *
      */
     Method M; /* Main calculations method */
-    /**
-     * @brief Класс TextClass.
-     *
-     * Класс, предназначеный для вспромогательной обработки введенных сообщений
-     *
-     * @see Table
-     */
-    TextClass txtCls; /* Class for normalize string */
     /**
      * @brief Класс Table.
      *
