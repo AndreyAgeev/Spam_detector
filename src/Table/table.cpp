@@ -1,5 +1,4 @@
 #include "table.h"
-//#include "src/TextClass/textclass.h"
 
 Table::Table()
 {
