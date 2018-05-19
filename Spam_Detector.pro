@@ -27,19 +27,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         src/main.cpp \
         src/MainWindow/mainwindow.cpp \
-    src/TextClass/textclass.cpp \
     src/Method/method.cpp \
     src/Table/table.cpp \
-    src/Browser/browser.cpp \
-    test/unittest.cpp
+    src/Browser/browser.cpp
 
 HEADERS += \
          src/MainWindow/mainwindow.h \
-    src/TextClass/textclass.h \
     src/Method/method.h \
     src/Browser/browser.h \
-    src/Table/table.h \
-    test/unittest.h
+    src/Table/table.h
 
 FORMS += \
          src/Forms/spamdetector.ui
