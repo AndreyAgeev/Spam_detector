@@ -31,7 +31,10 @@ double Method::getResult()
     {
         QString W = list.at(i);
          if(Pr(W,'S') == 0 || (Pr(W, 'S') + Pr(W, 'H') == 0))
+         {
+            delete [] pn;
             return -2;
+         }
         pn[i] = Pr(W, 'S')/(Pr(W, 'S') + Pr(W, 'H'));
     }
     for(auto i = 0; i < list.size(); i++)
@@ -43,6 +46,7 @@ double Method::getResult()
     {
         if(result == 0 || result + inc == 0)
         {
+            delete [] pn;
             return -2;
         }
         result = result/(result + inc);
