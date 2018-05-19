@@ -90,9 +90,14 @@ void MainWindow::on_pushButton_clicked()
     /* End of TextClass module*/
     M.setString(mainString);
     res = M.getResult();
-    if(res == -1)
+     if(res == -1)
     {
-        ui->lineEdit->setText("Error, the model was not trained");
+        ui->lineEdit->setText("Error, file for learning model was not found. Please do it yourself.");
+        return;
+    }
+    else if(res == -2)
+    {
+        ui->lineEdit->setText("Error, the learned model does not contain the used words");
         return;
     }
     resString.setNum(res);
