@@ -19,6 +19,8 @@ double Method::Pr(QString word, const char &type)
 }
 double Method::getResult()
 {
+    if(_t.hamTable.size() == 0 || _t.spamTable.size() == 0)
+          return -1;
     double result = 1.0;
     double inc = 1.0;
     QStringList list;
@@ -28,6 +30,8 @@ double Method::getResult()
     for(auto i = 0; i < list.size(); i++)
     {
         QString W = list.at(i);
+         if(Pr(W,'S') == 0 || (Pr(W, 'S') + Pr(W, 'H') == 0))
+            return -2;
         pn[i] = Pr(W, 'S')/(Pr(W, 'S') + Pr(W, 'H'));
     }
     for(auto i = 0; i < list.size(); i++)
@@ -37,6 +41,10 @@ double Method::getResult()
     }
     for(auto i = 0; i < list.size(); i++)
     {
+        if(result == 0 || result + inc == 0)
+        {
+            return -2;
+        }
         result = result/(result + inc);
     }
     delete [] pn;
