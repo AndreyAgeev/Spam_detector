@@ -83,7 +83,6 @@ void MainWindow::on_pushButton_clicked()
 
     /* Module in TextClass, setting string to normalize, then get normalized string */
     std::string stringToQString;
-    std::string qStringToString = std::string(mainString.toLocal8Bit().data()); /* Reverting QString to std::string */
     normalizedString = QString::fromLocal8Bit(stringToQString.c_str()); /* Reverting std::string to QString */
     /* End of TextClass module*/
     M.setString(mainString);
