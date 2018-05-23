@@ -9,11 +9,11 @@ double Method::Pr(QString word, const char &type)
 {
     if(type == 'S')
     {
-        return (_t.getKey(word, _t.spamTable))/ _t.spamTable.size();
+        return (_t.getKey(word, _t.spamTable))/ _t.getCount(_t.spamTable);
     }
     else
     {
-      return (_t.getKey(word, _t.hamTable)) / _t.hamTable.size();
+      return (_t.getKey(word, _t.hamTable)) / _t.getCount(_t.hamTable);
     }
 
 }
