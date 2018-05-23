@@ -54,6 +54,14 @@ class Table
 		*@return @ref double
 		*/
         double getKey(QString string, QMap<QString, double> &table);	
+	        /**
+                *@brief Получение количества слов в таблице.
+                *
+                * Функция возвращает количество слов в таблице, суммируя частоту появления слов.
+                *
+                *@return @ref double
+                 */
+        double getCount(QMap<QString, double> &table);
 		/**
 		*@brief Таблица неспама.
 		*
