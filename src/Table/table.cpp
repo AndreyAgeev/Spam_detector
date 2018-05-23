@@ -13,21 +13,21 @@ void Table::tokenizeString(QString string)
     /* Removing unnesesary symbols */
     string.replace(","," ");
     string.replace("."," ");
-    string.remove(QRegExp(QString::fromUtf8("[-`~!@#$%^&*()_—+=|:;<>«»,.?/{}\'\"\\\[\\\]\\\\]")));
+    string.remove(QRegExp(QString::fromUtf8("[-`~!@#$%^&*()_—+=|:;<>«»,.?{}\'\"\\\[\\\\]")));
     string.remove("\n");
     /* REMINDER! SOMETIMES IT PRODUCES THAT:
      * "Normal,sentence" -> "NormalSentence"
      * TODO:: FIXING
     */
 
-    if(string[0] == "s")
+    if((QChar)string[0] == "s")
     {
         /* THIS IS SPAM */
         string.remove("spam");
         list = string.split(" ");
         insertIntoSPAMTable(list);
     }
-    else if(string[0] == "h")
+    else if((QChar)string[0] == "h")
     {
         /* THIS IS HAM */
         string.remove("ham");
