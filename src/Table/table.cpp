@@ -13,7 +13,7 @@ void Table::tokenizeString(QString string)
     /* Removing unnesesary symbols */
     string.replace(","," ");
     string.replace("."," ");
-    string.remove(QRegExp(QString::fromUtf8("[-`~!@#$%^&*()_—+=|:;<>«»,.?{}\'\"\\\[\\\\]")));
+    string.remove(QRegExp(QString::fromUtf8("[-`~!@#$%^&*()_—+=|:;<>«»,.?{}\'\"\\\\\\]")));
     string.remove("\n");
     /* REMINDER! SOMETIMES IT PRODUCES THAT:
      * "Normal,sentence" -> "NormalSentence"
