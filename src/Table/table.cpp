@@ -97,4 +97,14 @@ double Table::getKey(QString string, QMap<QString, double> &table)
     return res;
 }
 
+double Table::getCount(QMap<QString, double> &table)
+{
+    QMap<QString,double>::iterator it = table.begin();
+    double count = 0.0;
+    for(; it != table.end(); ++it)
+    {
+        count += it.value();
+    }
+    return count;
+}
 
