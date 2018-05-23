@@ -24,12 +24,13 @@ MainWindow::MainWindow(QWidget *parent) :
     openFile->setShortcut(tr("Ctrl+O")); /* Setting hotkey, idk why */
     QAction *closeApp = new QAction(tr("Выход из программы"), this); /* CloseApp Action */
     QAction *aboutApp = new QAction(tr("О программе"),this); /* About Message box action */
-
+    ui->pushButton->setEnabled(false);
 	/*Learn the Model on the default file*/
-	Table tmpT;
+    Table tmpT;
     QFile learningFile("../learning/spam.csv");
     if(learningFile.open(QIODevice::ReadOnly | QIODevice::Text))
     {
+	    	ui->pushButton->setEnabled(true);
 		while(!learningFile.atEnd())
 		{
 			QString curString = learningFile.readLine();        
@@ -74,6 +75,8 @@ void MainWindow::on_pushButton_2_clicked()
 {
     Browser B;
     T = B.openFiles();
+    if(T.getCount(T.spamTable) != 0.0 && T.getCount(T.hamTable) != 0.0) 
+	ui->pushButton->setEnabled(true);
     M.setTable(T);
 }
 void MainWindow::on_pushButton_clicked()
