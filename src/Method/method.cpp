@@ -47,10 +47,7 @@ double Method::getResult()
         result *= pn[i];
         inc *= (1- pn[i]);
     }
-    for(auto i = 0; i < list.size(); i++)
-    {
-        result = result/(result + inc);
-    }
+    result = result/(result + inc);
     delete [] pn;
     return result;
 }
