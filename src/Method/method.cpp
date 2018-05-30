@@ -27,14 +27,16 @@ double Method::getResult()
     list = _string.split(" ");
     const int n = list.size();
     double * pn = new double[n];
+    QStringList new_list;
     for(auto i = 0; i < list.size(); i++)
     {
         QString W = list.at(i);
-        if(Pr(W,'S') == 0.0 && Pr(W, 'H') == 0.0)
+        if(Pr(W,'S') != 0.0 || Pr(W, 'H') != 0.0)
         {
-            list.removeAt(i);
+            new_list.append(W);
         }
     }
+    list = new_list;
     for(auto i = 0; i < list.size(); i++)
     {
         QString W = list.at(i);
