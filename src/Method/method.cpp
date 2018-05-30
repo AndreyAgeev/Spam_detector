@@ -31,7 +31,7 @@ double Method::getResult()
     for(auto i = 0; i < list.size(); i++)
     {
         QString W = list.at(i);
-        if(Pr(W,'S') != 0.0 || Pr(W, 'H') != 0.0)
+        if(Pr(W,'S') != 0.0 && Pr(W, 'H') != 0.0)
         {
             new_list.append(W);
         }
