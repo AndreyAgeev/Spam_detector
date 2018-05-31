@@ -13,7 +13,7 @@ class Table
 		* Функция принимает строку в качестве параметра, разбивает ее на слова и
 		* заносит их в соответствующую таблицу.
 		*
-		* @return @ref void
+		* @return void
         */
 		void tokenizeString(QString string);
 		/**
@@ -23,7 +23,7 @@ class Table
 		* которых там нет, и увеличивает частоту встречаемости тех, 
 		* которые уже есть.
 		*
-		*@return @ref void
+		*@return void
 		*/
         void insertIntoSPAMTable(QStringList listTokens);
 		/**
@@ -32,7 +32,7 @@ class Table
 		* которых там нет, и увеличивает частоту встречаемости тех, 
 		* которые уже есть.
 		*
-		*@return @ref void
+		*@return void
 		*/
         void insertIntoHAMTable(QStringList listTokens);
 		/**
@@ -51,7 +51,7 @@ class Table
 		* Функция получает значение - частоту встречаемости слова - 
 		* из соответствующей таблицы по ключу - переданному слову.
 		*
-		*@return @ref double
+		*@return double
 		*/
         double getKey(QString string, QMap<QString, double> &table);	
 	        /**
@@ -59,7 +59,7 @@ class Table
                 *
                 * Функция возвращает количество слов в таблице, суммируя частоту появления слов.
                 *
-                *@return @ref double
+                *@return double
                  */
         double getCount(QMap<QString, double> &table);
 		/**
