@@ -13,7 +13,7 @@ class Method
          *
          * Функция, предназначеная для вывода результата обработки сообщения.
          *
-         * @return @ref double
+         * @return double
          */
         double getResult();
         /**
@@ -21,7 +21,7 @@ class Method
          *
          * Функция, передающая алгоритму обрабатываемую строку
          *
-         * @return @ref void
+         * @return void
          */
         void setString(const QString &string);
         /**
@@ -30,7 +30,7 @@ class Method
          * Функция, передающая алгоритму заполненную обученную модель,
          * на основании которой будет проводиться определение принадлежности к спаму сообщения
          *
-         * @return @ref void
+         * @return void
          */
         void setTable( Table t);
         /**
@@ -39,7 +39,7 @@ class Method
          * Функция, принимающая слово и тип таблицы(спам или не спам), с помощью которой будем искать вероятность.
          * Функция возвращает вероятность того, что слова является спамом.
          *
-         * @return @ref double
+         * @return double
          */
         double Pr(QString, const char &type);
     private:
