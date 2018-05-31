@@ -49,10 +49,10 @@ void TestSpamDetectorTest::checkGetResult()
 {
     m.setString("hi");
     const double resHi = m.getResult();
-    QVERIFY(resHi > double(0));
+    QVERIFY(resHi >= double(0));
     m.setString("nothi");
     const double resNo = m.getResult();
-    QVERIFY(resNo >= double(0));
+    QVERIFY(resNo <= double(1));
 }
 
 void TestSpamDetectorTest::checkTable()
