@@ -27,6 +27,12 @@ int main(int argc, char *argv[])
 #include "src/Method/method.h"
 #include "src/Table/table.h"
 
+/**
+* @brief Область видимости
+*
+*	Область видимости для элементов пользовательского интерфейса
+*
+*/
 namespace Ui {
 class MainWindow;
 }
@@ -36,6 +42,12 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+    /**
+     * @brief Конструктор.
+     *
+     *	Создает экземпляр класса MainWindow, принимает указатель на QWidget
+     *
+     */
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     /**
@@ -68,7 +80,7 @@ private slots:
      *
      * Сигнал, предназначеный для открытия файлы, предназначеного для обучения модели
      * и запуск обучения
-     * @return @ref void
+     * @return void
      * @see  on_pushButton_2_clicked
      */
     void on_pushButton_2_clicked(); /* open browser and teach main mechanism */
@@ -77,7 +89,7 @@ private slots:
      *
      * Сигнал, предназначеный для вывода результата обработки сообщения.
      *
-     * @return @ref void
+     * @return void
      * @see  on_pushButton_2_clicked
      */
     void on_pushButton_clicked(); /* Show results */
@@ -86,7 +98,7 @@ private slots:
      *
      * Сигнал, предназначеный для ввода сообщения.
      *
-     * @return @ref void
+     * @return void
      * @see  on_pushButton_2_clicked
      */
     void on_textEdit_textChanged(); /* catch string from input stream */
@@ -95,7 +107,7 @@ private slots:
      *
      * Сигнал, предназначеный для вывода окна, содержащего информацию о приложении
      *
-     * @return @ref void
+     * @return void
      */
     void aboutApp(); /* 'About' message box */
 
